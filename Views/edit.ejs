@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <title>Update user</title>
+</head>
+
+<body>
+    <form action="/user/edit/<%= update[0].id %>" method="post">
+        <input type="text" name="edit_name" value="<%= update[0].name %>">
+        <input type="text" name="edit_surname" value="<%= update[0].surname %>">
+        <input type="text" name="edit_email" value="<%= update[0].email %>">
+        <button>Update</button>
+    </form>
+</body>
+
+</html>

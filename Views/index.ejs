@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>All users</title>
+</head>
+
+<body>
+  <table id="table" class="table table-bordered" >
+        <tbody>
+        <% result.forEach(function (user) { %>
+           <tr>
+               <td><%= user.name %></td>
+               <td><%= user.surname %></td>
+               <td><%= user.email %></td>
+               <td>
+                   <a href="/user/edit/<%= user.id %>">Update</a>
+                   <a href="/user/delete/<%= user.id %>">Delete</a>
+               </td>
+           </tr>
+        <% }) %>
+        </tbody>
+   </table>
+   <a type="button" href="/user/add" class="btn btn-info">Add user</a>
+</body>
+
+</html>
